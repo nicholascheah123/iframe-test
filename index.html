@@ -96,6 +96,11 @@
             pointer-events: none;
         }
 
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
         .login-btn, .register-btn {
             padding: 6px 18px;
             border-radius: 4px;
@@ -203,6 +208,12 @@
                 padding: 10px;
             }
 
+            .top-right {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+
             .nav-items {
                 overflow-x: auto;
                 width: 100%;
@@ -224,6 +235,67 @@
                 height: 700px;
             }
         }
+
+        @media (max-width: 430px) {
+            .top-header {
+                padding: 8px;
+            }
+
+            .logo-img {
+                width: 100px;
+                height: 25px;
+                font-size: 14px;
+            }
+
+            .top-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+
+            .country-flag {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+
+            .flag-circle {
+                width: 16px;
+                height: 16px;
+            }
+
+            .top-icons {
+                gap: 8px;
+            }
+
+            .icon-btn {
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
+            }
+
+            .login-btn, .register-btn {
+                padding: 8px 24px;
+                font-size: 12px;
+                width: auto;
+            }
+
+            .nav-item {
+                padding: 8px 12px;
+                font-size: 10px;
+            }
+
+            .nav-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
+            }
+
+            .hot-badge {
+                font-size: 8px;
+                padding: 1px 4px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -233,9 +305,6 @@
             <div class="logo-img">Interwin</div>
         </div>
         <div class="top-right">
-            <div class="timestamp">
-                📅 03/11/2025 11:34:25 am
-            </div>
             <div class="country-flag">
                 <div class="flag-circle"></div>
                 <span>INDONESIA</span>
@@ -246,7 +315,10 @@
                 <div class="icon-btn">�</div>
                 <div class="icon-btn">💬</div>
             </div>
-            <button class="login-btn">LOGIN</button>
+            <div class="auth-buttons">
+                <button class="login-btn">LOGIN</button>
+                <button class="register-btn">DAFTAR</button>
+            </div>
         </div>
     </div>
 
