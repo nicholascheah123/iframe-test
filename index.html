@@ -532,136 +532,13 @@
         <div class="iframe-container">
             <iframe
                 id="igscore-iframe"
-                src="https://staging2.igscore.net/football?isplugin=true&pluginType=worldcup2026"
+                src="https://staging2.igscore.net/football?isplugin=true&pluginType=worldcup2026&type=parent"
                 title="iGscore World Cup 2026 Widget"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
         </div>
-
-        <!-- Odds Comparison Table -->
-        <div class="odds-section">
-            <h2 class="odds-title">Odds Comparison Table</h2>
-
-            <!-- Tabs -->
-            <div class="odds-tabs">
-                <button class="odds-tab active" data-tab="1x2">1X2</button>
-                <button class="odds-tab" data-tab="handicap">Handicap</button>
-                <button class="odds-tab" data-tab="overunder">Over/Under</button>
-            </div>
-
-            <!-- 1X2 Content -->
-            <div class="odds-content active" id="1x2">
-                <div class="odds-table">
-                    <div class="odds-header">
-                        <div class="odds-header-cell">Provider</div>
-                        <div class="odds-header-cell">Home</div>
-                        <div class="odds-header-cell">Draw</div>
-                        <div class="odds-header-cell">Away</div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">WBet</div>
-                        <div class="odds-cell"><span class="odds-value">2.1</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.2</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.4</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">SABA</div>
-                        <div class="odds-cell"><span class="odds-value">2.05</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.25</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.5</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">BTi</div>
-                        <div class="odds-cell"><span class="odds-value">2.08</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.3</span></div>
-                        <div class="odds-cell"><span class="odds-value">3.55</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Handicap Content -->
-            <div class="odds-content" id="handicap">
-                <div class="odds-table">
-                    <div class="odds-header">
-                        <div class="odds-header-cell">Provider</div>
-                        <div class="odds-header-cell">Home</div>
-                        <div class="odds-header-cell"></div>
-                        <div class="odds-header-cell">Away</div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">WBet</div>
-                        <div class="odds-cell"><span class="odds-value">1.95</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.85</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">SABA</div>
-                        <div class="odds-cell"><span class="odds-value">1.93</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.86</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">BTi</div>
-                        <div class="odds-cell"><span class="odds-value">1.9</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.88</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Over/Under Content -->
-            <div class="odds-content" id="overunder">
-                <div class="odds-table">
-                    <div class="odds-header">
-                        <div class="odds-header-cell">Provider</div>
-                        <div class="odds-header-cell">Over 2.5</div>
-                        <div class="odds-header-cell"></div>
-                        <div class="odds-header-cell">Under 2.5</div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">WBet</div>
-                        <div class="odds-cell"><span class="odds-value">1.9</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.88</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">SABA</div>
-                        <div class="odds-cell"><span class="odds-value">1.88</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.87</span></div>
-                    </div>
-                    <div class="odds-row">
-                        <div class="odds-cell">BTi</div>
-                        <div class="odds-cell"><span class="odds-value">1.87</span></div>
-                        <div class="odds-cell"></div>
-                        <div class="odds-cell"><span class="odds-value">1.86</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <script>
-        // Odds table tab switching
-        const oddsTabButtons = document.querySelectorAll('.odds-tab');
-        const oddsContents = document.querySelectorAll('.odds-content');
-
-        oddsTabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all tabs and contents
-                oddsTabButtons.forEach(btn => btn.classList.remove('active'));
-                oddsContents.forEach(content => content.classList.remove('active'));
-
-                // Add active class to clicked tab
-                button.classList.add('active');
-
-                // Show corresponding content
-                const tabName = button.getAttribute('data-tab');
-                document.getElementById(tabName).classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
 
